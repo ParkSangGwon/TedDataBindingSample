@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/btnBasic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic"
+        />
+
+
+    <Button
+        android:id="@+id/btnButterKnife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ButterKnife"
+        />
+
+
+    <Button
+        android:id="@+id/btnDataBinding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DataBinding"
+        />
+
+    <Button
+        android:id="@+id/btnSns1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sns 1"
+        />
+
+    <Button
+        android:id="@+id/btnSns2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sns 2"
+        />
+
+</LinearLayout>

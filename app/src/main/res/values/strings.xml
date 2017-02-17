@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TedDataBindingSample</string>
+
+
+
+
+    <string name="post">게시물</string>
+    <string name="follow">팔로우</string>
+    <string name="follower">팔로워</string>
+    <string name="following">팔로잉</string>
+
+
+
+    <string name="sns_profile_name">박상권 Ted Park</string>
+    <string name="sns_profile_introduce">32세 비정상인\nKorean / English / Thailand\n#일상#음식#셀카\nNow or Never</string>
+
+</resources>

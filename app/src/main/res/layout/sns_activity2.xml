@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="user"
+            type="gun0912.databinding.sns.User2"/>
+
+        <variable
+            name="activity"
+            type="gun0912.databinding.sns.SnsActivity2"/>
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                >
+
+                <gun0912.databinding.common.view.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/profile_avatar_size"
+                    android:layout_height="@dimen/profile_avatar_size"
+                    app:border_color="@color/bg_gray"
+                    app:border_width="0.5dp"
+                    app:error="@{@drawable/no_pic}"
+                    app:imageUrl="@{user.imgProfile}"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <include
+                            layout="@layout/sns_counter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:count="@{user.postCount}"
+                            app:title="@{@string/post}"/>
+
+                        <include
+                            layout="@layout/sns_counter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:count="@{user.followerCount}"
+                            app:title="@{@string/follower}"/>
+
+                        <include
+                            layout="@layout/sns_counter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:count="@{user.followingCount}"
+                            app:title="@{@string/following}"/>
+
+                    </LinearLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/profile_follow_button_height"
+                        android:layout_marginTop="@dimen/list_item_text_margin"
+                        >
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="@{user.loaded}"
+                            >
+
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/profile_follow_button_height"
+                                android:gravity="center"
+                                android:onClick="@{activity::onFollowToggle}"
+                                android:text="@string/follow"
+                                android:theme="@style/PrimaryButton"
+                                android:visibility="@{!user.follow}"
+                                />
+
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/profile_follow_button_height"
+                                android:gravity="center"
+                                android:onClick="@{activity::onFollowToggle}"
+                                android:text="@string/following"
+                                android:theme="@style/PrimaryFlatButton"
+                                android:visibility="@{user.follow}"
+                                />
+
+                        </RelativeLayout>
+
+                        <ProgressBar
+                            android:layout_width="@dimen/profile_follow_progress_size"
+                            android:layout_height="@dimen/profile_follow_progress_size"
+                            android:layout_centerInParent="true"
+                            android:visibility="@{!user.loaded}"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CustomText_Body"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@{user.name}"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                style="@style/CustomText_Body"
+                android:layout_marginTop="@dimen/list_item_text_margin"
+                android:text="@{user.introduce}"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

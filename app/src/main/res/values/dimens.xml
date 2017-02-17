@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="list_item_container_padding">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+    <dimen name="list_item_text_margin">3dp</dimen>
+
+
+    <dimen name="profile_avatar_size">80dp</dimen>
+    <dimen name="profile_follow_progress_size">24dp</dimen>
+    <dimen name="profile_follow_button_height">36dp</dimen>
+
+</resources>
