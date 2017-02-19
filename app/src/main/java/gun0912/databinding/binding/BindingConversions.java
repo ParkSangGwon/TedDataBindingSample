@@ -22,7 +22,7 @@ public class BindingConversions {
 
     @BindingConversion
     public static String convertDateToDisplayedText(Date date) {
-        return new SimpleDateFormat("yyyy:MM:dd").format(date);
+        return new SimpleDateFormat("yyyy.MM.dd").format(date);
     }
 
 
